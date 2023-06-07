@@ -1,0 +1,15 @@
+import { useSelector } from "react-redux";
+
+function AirlineList() {
+  const airlineList = useSelector((store) => store.airlineList);
+
+  return (
+    <ul>
+      {airlineList.map((airline, i) => (
+        <li key={i}>{airline}</li>
+      ))}
+    </ul>
+  );
+}
+
+export default AirlineList;
